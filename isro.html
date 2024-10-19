@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO Logo</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Arrow symbol */
+        .arrow {
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(135deg, orange 50%, transparent 50%), 
+                        linear-gradient(225deg, orange 50%, transparent 50%);
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        /* Vertical line below arrow */
+        .line {
+            width: 5px;
+            height: 50px;
+            background-color: orange;
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Text styling */
+        .isro-text {
+            font-size: 24px;
+            color: orange;
+            letter-spacing: 3px;
+        }
+
+        .isro-text span {
+            display: block;
+        }
+
+        .isro-text .english {
+            font-weight: bold;
+        }
+
+        .isro-text .hindi {
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+            text-align: right;
+            margin-top: -15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo-container">
+    <!-- Arrow symbol -->
+    <div class="arrow"></div>
+    <div class="line"></div>
+    
+    <!-- ISRO Text -->
+    <div class="isro-text">
+        <span class="hindi">इसरो</span>
+        <span class="english">ISRO</span>
+    </div>
+</div>
+
+</body>
+</html>

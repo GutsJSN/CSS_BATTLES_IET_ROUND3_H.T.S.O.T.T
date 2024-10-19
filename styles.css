@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, 
+                rgba(0, 0, 0, 1) 0%,       /* Black at the very edge */
+                rgba(75, 0, 130, 0.8) 30%, /* Indigo closer in */
+                rgba(128, 0, 128, 0.7) 50%, /* Purple further in */
+                rgba(255, 105, 180, 0.6) 70%, /* Bright Pink */
+                rgba(255, 0, 0, 0.8) 90%,  /* Red towards the center */
+                rgba(255, 0, 0, 1) 100%); /* Bright Red at the center */
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(238,130,238,0.3), rgba(75,0,130,0.2), rgba(0,0,255,0.2), rgba(0,191,255,0.2), rgba(0,255,127,0.2));
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.title {
+    font-size: 7rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    z-index: 3;
+    position: relative;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 
+                 0 0 40px rgba(255, 0, 255, 0.5), 
+                 0 0 60px rgba(0, 0, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 3px;
+    margin-top: -20px;
+    z-index: 3;
+    position: relative;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                 0 0 20px rgba(255, 0, 255, 0.5),
+                 0 0 30px rgba(0, 0, 255, 0.5);
+}
+
+/* Nebula Cloud Effect */
+.cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(0,0,0, 0)), 
+                radial-gradient(circle at 30% 60%, rgba(200, 50, 255, 0.1), rgba(0, 0, 0, 0)), 
+                radial-gradient(circle at 70% 40%, rgba(0, 150, 255, 0.1), rgba(0, 0, 0, 0));
+    animation: cloud-move 30s ease-in-out infinite;
+}
+
+@keyframes cloud-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Stardust effect */
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkling 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkling {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
